@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+
+  postgres:
+    image: postgres
+    restart: always
+    ports:
+      - "5431:5432"
+    environment:
+      - DATABASE_HOST=${DB_HOST}
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASS}
+      - POSTGRES_DB=${DB_NAME}
